@@ -66,6 +66,7 @@ function App() {
     if (input.trim().length === 0) {
       return;
     }
+    console.warn('s')
     let messagesData = {
       _id: generateRandomID(),
       user: { _id: "K3" },
@@ -74,9 +75,10 @@ function App() {
     };
     fire
       .database()
-      .ref(path)
+      // HATA BURADAYMIŞ
+      .ref(chatRef)
       .push(messagesData)
-      .then((infos) => {})
+      .then((res) => console.warn(res))
       .catch((error) => {
         //error callback
         console.warn("error ", error);
