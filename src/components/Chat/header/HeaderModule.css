@@ -1,0 +1,43 @@
+.header {
+    display: flex;
+    height: 14%;
+}
+.left {
+    margin-left: 5%;
+    margin-top: 5%;
+}
+.left img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px; 
+}
+.right {
+    margin-top: 7%;
+    margin-left: 3%;
+}
+.username {
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.72;
+    letter-spacing: normal;
+    text-align: left;
+    color: #4d4c4c;
+    font-family: 'proxima-nova', sans-serif;
+    display: inline;
+}
+.user-location {
+    padding-top: 2px;
+    font-size: 15px;
+    opacity: 0.5;
+    font-family: 'proxima-nova', sans-serif;    
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: left;
+    color: #4d4c4c;
+}
+

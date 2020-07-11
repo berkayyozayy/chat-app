@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__Element_Icon_Mail" width="26.667" height="21.334" data-name="Element/Icon/Mail" viewBox="0 0 26.667 21.334">
+    <defs>
+        <clipPath id="prefix__clip-path">
+            <path id="prefix__Mail" d="M24.242 21.334H2.424A2.4 2.4 0 0 1 0 18.962V2.37A2.4 2.4 0 0 1 2.424 0h21.818a2.4 2.4 0 0 1 2.424 2.37v16.592a2.4 2.4 0 0 1-2.424 2.372zM2.032 2.843v16.526h22.6V2.843l-11.3 9.126zm1.778-.856l9.59 7.45 9.461-7.45z" class="prefix__cls-1"/>
+        </clipPath>
+        <style>
+            .prefix__cls-1{fill:#bfc5d2}
+        </style>
+    </defs>
+    <g id="prefix__Component_109_1" data-name="Component 109 – 1">
+        <g id="prefix__Mail-2" data-name="Mail">
+            <path id="prefix__Mail-3" d="M24.242 21.334H2.425A2.4 2.4 0 0 1 0 18.963V2.371A2.4 2.4 0 0 1 2.425 0h21.817a2.4 2.4 0 0 1 2.425 2.371v16.592a2.4 2.4 0 0 1-2.425 2.371zM2.031 2.843v16.526h22.6V2.843l-11.3 9.126zm1.779-.857l9.59 7.451 9.461-7.45z" class="prefix__cls-1" data-name="Mail"/>
+        </g>
+    </g>
+</svg>
