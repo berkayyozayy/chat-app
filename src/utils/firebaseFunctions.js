@@ -34,6 +34,7 @@ export async function getLastMessages(coachId) {
         res.map((item, i) => {
             let valCheck = item.val();
             if(valCheck === null){
+                /*
                 lastRealMessages.push({
                     id: i,
                     name: usersArr[i] ? usersArr[i].name : '',
@@ -42,6 +43,7 @@ export async function getLastMessages(coachId) {
                     createdAt: '',
                     path: messagePaths[i]
                 })
+                */
             }
             else {
                 item.forEach(messageData => {
