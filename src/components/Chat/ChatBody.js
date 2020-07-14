@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./ChatBodyModule.css";
 import Header from "./header/Header";
 import ChatPage from "./chatpage/ChatPage";
@@ -8,8 +8,9 @@ import fire from "../../db/app";
 import firebase from "firebase";
 
 function ChatBody({ message, handleChange, sendMessage, keyPressHandler }) {
+
   return (
-    <div className="container">
+    <div className="chat-container">
       <Header />
       <Divider />
       <ChatPage message={message} />

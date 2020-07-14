@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./ChatPageModule.css";
+import ReactDOM from 'react-dom';
 
 const ReceivedChat = ({message}) => {
+
 
   return (
     <div className="received-message">

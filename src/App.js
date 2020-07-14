@@ -3,8 +3,9 @@ import "./App.css";
 import fire from "./db/app";
 import firebase from "firebase";
 import ChatBody from "./components/Chat/ChatBody";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Inbox from "./components/Inbox/index";
+import Login from './components/Login/Login';
 
 function App() {
   let path = "Messages";
@@ -32,8 +33,7 @@ function App() {
         fetchedData.map((messages) => {
           lastMessages.push(messages.pop());
         });
-        lastMessages.sort((x, y) => (x.createdAt > y.createdAt) ? 1: -1)
-        console.log("last messages >>>>>>>", lastMessages);
+        lastMessages.sort((x, y) => (x.createdAt > y.createdAt ? 1 : -1));
         setArr(lastMessages);
 
         const chatBodyRef = fire
@@ -41,7 +41,6 @@ function App() {
           .ref(chatRef)
           .on("value", (snapshot) => {
             let infos = snapshot.val();
-            console.log("infos>>>>>>.",infos)
             for (const [key, value] of Object.entries(infos)) {
               const text = value.text;
               const userId = value.user["_id"];
@@ -51,7 +50,6 @@ function App() {
               fetchedMessages.push(obj);
             }
           });
-         
         setMessages(fetchedMessages);
       });
   }, []);
@@ -74,9 +72,9 @@ function App() {
     };
     fire
       .database()
-      .ref(path)
+      .ref(chatRef)
       .push(messagesData)
-      .then((infos) => {})
+      .then((res) => {})
       .catch((error) => {
         //error callback
         console.warn("error ", error);
@@ -101,22 +99,25 @@ function App() {
       sendMessage();
     }
   };
-
   return (
     <Router>
       <div className="app">
-        {/* <Switch>
-          <Route exact path="/inbox" component={() => <Inbox data={arr} />} /> */}
-               
+        <Switch>
+          <Route exact path="/" component={Login} />
+          <Route exact path="/inbox" component={() => <Inbox data={arr} />} />
+          <Route
+            exact
+            path="/chat"
+            component={() => (
               <ChatBody
                 message={messages}
                 handleChange={handleChange}
                 sendMessage={sendMessage}
                 keyPressHandler={keyPressHandler}
               />
-           
-           
-        {/* </Switch> */}
+            )}
+          />
+        </Switch>
       </div>
     </Router>
   );

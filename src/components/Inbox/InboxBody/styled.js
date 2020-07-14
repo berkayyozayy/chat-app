@@ -42,7 +42,7 @@ export const InboxBodyContainer = styled.div`
     margin-left: 2%;
     margin-right: 5%;
     /* border: 1px solid red; */
-    /* overflow: scroll; */
+    overflow: scroll;
 }
 
 .inbox-message {
