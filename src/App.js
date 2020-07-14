@@ -64,6 +64,7 @@ function App() {
     if (input.trim().length === 0) {
       return;
     }
+    console.warn('s')
     let messagesData = {
       _id: generateRandomID(),
       user: { _id: "K3" },
@@ -72,9 +73,16 @@ function App() {
     };
     fire
       .database()
+<<<<<<< HEAD
       .ref(chatRef)
       .push(messagesData)
       .then((res) => {})
+=======
+      // HATA BURADAYMIŞ
+      .ref(chatRef)
+      .push(messagesData)
+      .then((res) => console.warn(res))
+>>>>>>> fdc9d345fa450504eb796040bbef50f5b6cff12a
       .catch((error) => {
         //error callback
         console.warn("error ", error);
