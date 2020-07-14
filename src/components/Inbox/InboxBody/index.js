@@ -3,9 +3,9 @@ import { InboxBodyContainer } from "./styled";
 import User from "../img/user-profile-image.jpg";
 
 
-const InboxBody = ({ data }) => {
+const InboxBody = ({ data, onLastMessagePressed }) => {
   // console.log("data >>>>>>", data);
-
+  console.warn(data)
   return (
     <InboxBodyContainer>
       <div className="main-header">
@@ -14,21 +14,30 @@ const InboxBody = ({ data }) => {
       </div>
 
       <div className="messages">
-        {data &&
-          data.map((obj, index) => {
+        {data.map((obj, index) => {
+            let hours = '', minutes = '', date = '';
+            if(obj.createdAt){
+              let dateObj = new Date(obj.createdAt);
+              hours = dateObj.getHours();
+              hours = hours < 10 ? '0'+hours : hours;
+              minutes = dateObj.getMinutes();
+              minutes = minutes < 10 ? '0'+minutes : minutes;
+              date = hours+':'+minutes;
+            }
+
             return (
-              <div className="inbox-message">
+              <div className="inbox-message" key={index} onClick={() => onLastMessagePressed(obj.path)}>
                 <div className="user-image">
                   <img src={User} alt="user-image" />
                 </div>
                 <div className="user-name">
-                  <p>{obj.user["_id"]}</p>
+                  <p>{""}</p>
                 </div>
                 <div className="inbox-body-message">
-                  <p>{obj.text}</p>
+                  <p>{obj.lastMessage}</p>
                 </div>
                 <div className="time">
-                  <p>3 Dk Once</p>
+                <p>{' '+ date}</p>
                 </div>
               </div>
             );
