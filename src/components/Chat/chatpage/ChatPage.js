@@ -20,8 +20,9 @@ const OutGoingChat = ({message}) => {
 };
 
 function ChatPage({message}) {
+  const coachIds = ['K1','K2','K3','K4'];
   const chats = message.map((obj) => {
-    if (obj["userId"] === "K3") {
+    if (coachIds.includes(obj.user['_id'])) {
       return <OutGoingChat message={obj["text"]} />;
     } else {
       return <ReceivedChat message={obj["text"]} />;

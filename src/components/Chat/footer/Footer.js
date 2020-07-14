@@ -2,6 +2,7 @@ import React from "react";
 import "./FooterModule.css";
 
 function Footer({ input, handleChange, handleSubmit, keyPressHandler }) {
+
   return (
     <div className="footer">
       <div className="message">
