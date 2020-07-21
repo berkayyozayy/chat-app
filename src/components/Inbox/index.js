@@ -1,4 +1,6 @@
 import React, {useEffect, useState} from 'react'; 
+import { useSelector } from "react-redux";
+
 import Header from './Header'
 import InboxBody from './InboxBody'
 import {InboxContainer} from './styled'
@@ -6,6 +8,7 @@ import {InboxContainer} from './styled'
 import {firebaseFunctions} from '../../utils';
 
 const Inbox = ({data, history}) => {
+    const user = useSelector(state => state.authReducer.user);
     const [lastMessages, setLastMessages] = useState([]);
     console.log("history >>>>>>>>>", history.location);
 

@@ -31,7 +31,7 @@ function ChatBody({ history }) {
 
   const handleChange = (e) => setInput(e.target.value)
 
-  const sendMessage = (event) => {
+  const sendMessage = () => {
     if (input.trim().length === 0) {
       return;
     }
@@ -50,12 +50,12 @@ function ChatBody({ history }) {
         //error callback
         console.warn("error ", error);
       });
-    event.preventDefault();
   };
 
   const keyPressHandler = (e) => {
     if (e.keyCode === 13) {
       sendMessage();
+      e.preventDefault();
     }
   };
   

@@ -85,7 +85,7 @@ const InboxBody = ({ data, onLastMessagePressed }) => {
             minutes = minutes < 10 ? "0" + minutes : minutes;
             date = hours + ":" + minutes;
           }
-
+          console.warn(obj)
           return (
             <div
               className="inbox-message"
@@ -96,7 +96,7 @@ const InboxBody = ({ data, onLastMessagePressed }) => {
                 <img src={User} alt="user-image" />
               </div>
               <div className="user-name">
-                <p>{""}</p>
+                <p>{obj.id}</p>
               </div>
               <div className="inbox-body-message">
                 <p>{obj.lastMessage}</p>

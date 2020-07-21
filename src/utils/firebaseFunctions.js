@@ -49,7 +49,7 @@ export async function getLastMessages(coachId) {
                 item.forEach(messageData => {
                     messageData = messageData.val();
                     lastRealMessages.push({
-                        id: i,
+                        id: usersArr[i].id,
                         name: usersArr[i] ? usersArr[i].name : '',
                         lastMessage: messageData.image ? '-Resim-' : messageData.text,
                         lastMessageDate: getLastMessageDate(messageData.createdAt),

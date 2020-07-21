@@ -6,8 +6,8 @@ function Footer({ input, handleChange, handleSubmit, keyPressHandler }) {
   return (
     <div className="footer">
       <div className="message">
-        <form onKeyDown={keyPressHandler}>
           <input
+            onKeyDown={keyPressHandler}
             type="text"
             name="input"
             value={input}
@@ -15,7 +15,6 @@ function Footer({ input, handleChange, handleSubmit, keyPressHandler }) {
             placeholder="Mesajınızı Buraya Yazınız..."
             className="input-textarea"
           ></input>
-        </form>
       </div>
       <div className="send-button">
         <img
