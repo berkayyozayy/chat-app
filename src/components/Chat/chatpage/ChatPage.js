@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 
 const ReceivedChat = ({message}) => {
 
-
   return (
     <div className="received-message">
       <p className="received-message-text">{message}</p>

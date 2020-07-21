@@ -16,6 +16,7 @@ export const InboxBodyContainer = styled.div`
 }
 .text {
     font-size: 25px;
+    margin-top: 10px;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
@@ -118,4 +119,30 @@ export const InboxBodyContainer = styled.div`
     text-align: right;
     color: #43425d;
 }
+
+.start-group-chat {
+    margin-left: 30px;
+    width: auto;
+    text-align: center;
+
+}
+.button-group-chat {
+    font-style: normal;
+    line-height: 1.47;
+    transition: 0.9s;
+
+}
+.button-group-chat:hover {
+    background-color: white; 
+    color: black; 
+}
+.one-to-one-button {
+    margin-left: 10px;
+    transition: 0.9s;
+}
+.one-to-one-button:hover {
+    background-color: white; 
+    color: black; 
+}
+
 `;

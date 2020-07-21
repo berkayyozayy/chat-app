@@ -9,7 +9,8 @@ import firebase from "firebase";
 
 import {firebaseFunctions} from '../../utils'
 
-function ChatBody({ keyPressHandler, history }) {
+function ChatBody({ history }) {
+  
   const [path] = useState(history.location.state.path);
   const [coachId] = useState(history.location.state.coachId);
   const [input, setInput] = useState('');
@@ -52,6 +53,12 @@ function ChatBody({ keyPressHandler, history }) {
     event.preventDefault();
   };
 
+  const keyPressHandler = (e) => {
+    if (e.keyCode === 13) {
+      sendMessage();
+    }
+  };
+  
   return (
     <div className="chat-container">
       <Header path={path} />

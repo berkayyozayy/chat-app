@@ -8,7 +8,7 @@ function Footer({ input, handleChange, handleSubmit, keyPressHandler }) {
       <div className="message">
         <form onKeyDown={keyPressHandler}>
           <input
-            tyoe="text"
+            type="text"
             name="input"
             value={input}
             onChange={handleChange}

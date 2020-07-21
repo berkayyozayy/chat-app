@@ -7,6 +7,7 @@ import {firebaseFunctions} from '../../utils';
 
 const Inbox = ({data, history}) => {
     const [lastMessages, setLastMessages] = useState([]);
+    console.log("history >>>>>>>>>", history.location);
 
     useEffect(() => {
         let coachId = history.location.state.coachId;
@@ -14,7 +15,7 @@ const Inbox = ({data, history}) => {
             lastMessagesArr = lastMessagesArr.sort((a, b) => a.createdAt > b.createdAt ? -1 : 1)
             setLastMessages(lastMessagesArr)
         });
-    }, [])
+    }, []);
 
     function onLastMessagePressed(path){
         history.push('chat', {
@@ -22,6 +23,13 @@ const Inbox = ({data, history}) => {
             coachId: history.location.state.coachId
         })
     }
+
+    // const PeerTOPeerIds = (path) => {
+    //     history.push('GroupChat', {
+    //         path,
+    //         coachId: history.location.state.coachId
+    //     })
+    // }
 
     return (
         <InboxContainer>
