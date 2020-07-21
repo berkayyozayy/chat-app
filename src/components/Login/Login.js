@@ -8,19 +8,19 @@ const Login = ({history}) => {
   const [selectedCoachId, setSelectedCoachId] = useState("K1")
   const [coaches] = useState([
     {
-      label: "K-1",
+      label: "Beril Albaş",
       value: "K1",
     },
     {
-      label: "K-2",
+      label: "Merve Şahin",
       value: "K2",
     },
     {
-      label: "K-3",
+      label: "Yağmur Cantekin",
       value: "K3",
     },
     {
-      label: "K-4",
+      label: "Beliz Baylan",
       value: "K4",
     },
   ]);
